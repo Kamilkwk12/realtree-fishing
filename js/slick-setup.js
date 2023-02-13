@@ -1,8 +1,8 @@
 function slickNews() {
     $(".popular-news-desktop-carousel").slick({
         arrows: false,
-        infinite: true,
         autoplay: true,
+        infinite: true,
         slidesToShow: 2,
         slidesToScroll: 1,
         verticalSwiping: true,
@@ -39,6 +39,7 @@ function slickAccordionSetup($className, $buttonName) {
     $($buttonName).click(function () {
         $($className).slick({
             arrows: false,
+            autoplay: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             mobileFirst: true,
@@ -68,6 +69,7 @@ $(document).ready(slickAccordionSetup($ac3, $b3));
 $(document).ready(function () {
     $(".lures-carousel").slick({
         arrows: false,
+        autoplay: true,
         mobileFirst: true,
         draggable: true,
         slidesToShow: 1,
