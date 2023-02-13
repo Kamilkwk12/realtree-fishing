@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous"
+        />
+
+        <link rel="stylesheet" href="./css/main.css" />
+        <title>Realtree Fishing - portal wędkarski</title>
+        <script src="https://kit.fontawesome.com/69f5ad02bc.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="return-top">
+            <a href="#home"><i class="fa-solid fa-chevron-up"></i></a>
+        </div>
+        <nav class="navbar navbar-expand-xxl bg-body-tertiary position-fixed top-0 w-100 py-2">
+            <div class="container position-relative">
+                <a class="navbar-logo" href="#home">
+                    <img src="./img/logo-white-graphic.png" alt="" />
+                </a>
+                <a class="navbar-brand me-0" href="#home">
+                    <img src="./img/logo-white-text.png" alt="" />
+                </a>
+                <button
+                    class="navbar-toggler border-0"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <img class="offcanvas-background" src="./img/logo-black-text.png" />
+
+                    <div class="offcanvas-header">
+                        <img class="offcanvas-title" id="offcanvasNavbarLabel" src="./img/logo-white.png" alt="" />
+                        <button type="button" class="btnClose" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                    >Artykuły</a
+                                >
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#news-feed">Najnowsze artykuły</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#popular-articles">Popularne artykuły</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#fisheries">Łowiska</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sets">Zestawy wędkarskie</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#lures">Przynęty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Kontakt</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="offcanvas-footer d-xxl-none">
+                        <p>Realtree Fishing &copy; 2023</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header id="home" class="position-relative d-flex align-items-center">
+            <div class="shadow"></div>
+            <div class="container">
+                <div class="header-title mx-3">
+                    <h1 data-aos="fade-up">Witaj w <span>Realtree Fishing!</span></h1>
+                    <p data-aos="fade-up" data-aos-delay="200">Portalu z najnowszymi i najciekawszymi informacjami ze świata wędkarstwa</p>
+                </div>
+            </div>
+            <a href="#news-feed"><i class="fa-solid fa-chevron-down up-down" data-aos="fade-up" data-aos-delay="400"></i></a>
+        </header>
+
+        <section id="news-feed" class="news-feed pt-4" data-aos="zoom-in" data-aos-delay="800">
+            <div class="container d-flex align-items-center">
+                <div class="row">
+                    <div class="col-xxl-9 position-relative">
+                        <div class="title w-100">
+                            <h2>najnowsze artykuły</h2>
+                            <p class="news-feed-title">Najnowsze informacje i porady ze świata wędkarstwa</p>
+                        </div>
+                        <div class="line line-in d-none d-lg-block" style="right: 15px"></div>
+                        <div class="line-mobile line-in d-lg-none mb-4"></div>
+                        <div class="row new-news mb-4">
+                            <div class="col-md-4 mb-3">
+                                <a href="#"
+                                    ><div class="card text-bg-dark h-100">
+                                        <div style="position: relative">
+                                            <h5 class="card-title">O czym należy pamiętać podczas wędkowania zimą?</h5>
+                                            <img src="./img/zima.jpg" class="card-img-top" alt="Wędzkowanie zimą" />
+
+                                            <div class="news-card-shadow top-0"></div>
+                                        </div>
+                                        <div class="card-body d-none d-lg-block">
+                                            <p class="card-text">
+                                                Wędkowanie na tyle sprawia wielu osobom radość i przyjemność że nie potrafią zapomnieć o wędkowaniu na
+                                                czas zimy. Pytanie w takim razie, jak przygotować się do wędkowania podczas zimy?
+                                            </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <p class="card-text"><small class="text-muted">Opublikowano 36 min temu</small></p>
+                                        </div>
+                                    </div></a
+                                >
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <a href="#"
+                                    ><div class="card text-bg-dark h-100">
+                                        <div style="position: relative">
+                                            <h5 class="card-title">Porady dotyczące sprzętu wędkarskiego</h5>
+                                            <img src="./img/sprzet.jpg" class="card-img-top" alt="Wędzkowanie zimą" />
+
+                                            <div class="news-card-shadow top-0"></div>
+                                        </div>
+                                        <div class="card-body d-none d-lg-block">
+                                            <p class="card-text">
+                                                Chęć zaznajomienia się z nowych hobby zawsze wymaga pewnego wysiłku. Musimy zdobyć dodatkową wiedzę,
+                                                czasem zdać uprawnienia i zdobyć potrzebny sprzęt. Na co zwrócić uwagę przy wyborze odpowiednich
+                                                narzędzi wędkarskich?
+                                            </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <p class="card-text"><small class="text-muted">Opublikowano 1 dzień temu</small></p>
+                                        </div>
+                                    </div></a
+                                >
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <a href="#"
+                                    ><div class="card text-bg-dark h-100">
+                                        <div class="card-img" style="position: relative">
+                                            <h5 class="card-title">Zaporowa cena - jak drogi wodne wpływają na ryby</h5>
+                                            <img src="./img/susza.jpg" class="card-img-top" alt="Wędzkowanie zimą" />
+
+                                            <div class="news-card-shadow top-0"></div>
+                                        </div>
+                                        <div class="card-body d-none d-lg-block">
+                                            <p class="card-text">
+                                                Zasobna w ryby woda to marzenie każdego wędkarza. W ostatnim czasie, gdy coraz częściej doskwierają
+                                                nam susze i niedobory opadów, zaczynamy zastanawiać się, czy poziom wody w rzekach pozwoli na
+                                                zachowanie stabilnej populacji ryb.
+                                            </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <p class="card-text"><small class="text-muted">Opublikowano 2 dni temu</small></p>
+                                        </div>
+                                    </div></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div id="popular-articles" class="col-xxl-3 popular-news">
+                        <div class="title position-relative">
+                            <h2 style="font-size: 1.75rem">popularne artykuły</h2>
+                            <div class="line d-none d-lg-block d-xxl-none"></div>
+                        </div>
+                        <div class="line-mobile d-lg-none mb-4"></div>
+                        <div class="row popular-news-desktop-carousel">
+                            <div class="col-12 col-md-6 col-xxl-12">
+                                <a href="#"
+                                    ><div class="card mb-4">
+                                        <img src="./img/ocean.jpg" class="img-fluid rounded-top" alt="Wędkarz na morzu" />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Wędkarstwo morskie - od czego zacząć?</h5>
+                                            <p class="card-text d-xxl-none">
+                                                Od czego powinniśmy zacząć i co warto wiedzieć zaczynając przygodę z takim wędkarstwem?
+                                            </p>
+                                            <p class="card-text"><small class="text-muted">Opublikowano 5 dni temu</small></p>
+                                        </div>
+                                    </div></a
+                                >
+                            </div>
+                            <div class="col-12 col-md-6 col-xxl-12">
+                                <a href="#"
+                                    ><div class="card mb-4">
+                                        <img src="./img/wedkarstwo1.jpg" class="img-fluid rounded-top" alt="Wędkarz ze spiningiem" />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Wędkarstwo spiningowe - jak zacząć?</h5>
+                                            <p class="card-text d-xxl-none">
+                                                Od czego powinniśmy zacząć i co warto wiedzieć zaczynając przygodę z takim wędkarstwem?
+                                            </p>
+                                            <p class="card-text"><small class="text-muted">Opublikowano 9 dni temu</small></p>
+                                        </div>
+                                    </div></a
+                                >
+                            </div>
+                            <div class="col-12 col-md-6 col-xxl-12">
+                                <a href="#"
+                                    ><div class="card mb-4">
+                                        <img
+                                            src="./img/19105786_775800375931082_2349823862399128746_n.jpg"
+                                            class="img-fluid rounded-top"
+                                            alt="Rekordowy okoń"
+                                        />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Okoń 61,5 cm - padł nowy rekord połowu w Szwecji!</h5>
+                                            <p class="card-text d-xxl-none">
+                                                Okonia 61,5 cm Emanuel Swärds złowił w nocy o godzinie 00:30 na jednym z łowisk Sörbyns.
+                                            </p>
+                                            <p class="card-text"><small class="text-muted">Opublikowano 21 dni temu</small></p>
+                                        </div>
+                                    </div></a
+                                >
+                            </div>
+                            <div class="col-12 col-md-6 col-xxl-12">
+                                <a href="#"
+                                    ><div class="card mb-4">
+                                        <img src="./img/okoń.jpg" class="img-fluid rounded-top" alt="Okoń" />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Jaka wędka na okonia? Propozycje na 2023</h5>
+                                            <p class="card-text d-xxl-none">Przedstawiamy kilka propozycji firmy na co łapać okonia w 2023 roku.</p>
+                                            <p class="card-text p"><small class="text-muted">Opublikowano 1 miesiąc temu</small></p>
+                                        </div>
+                                    </div></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fisheries" class="fisheries pt-3" data-aos="zoom-in">
+            <div class="container">
+                <div class="title position-relative">
+                    <h2>Łowiska</h2>
+                    <p>Najlepsze łowiska w pobliżu dużych miast</p>
+                    <div class="line d-none d-lg-block"></div>
+                </div>
+                <div class="line-mobile d-lg-none mb-4"></div>
+
+                <div class="accordion accordion-flush py-2" id="accordionFlushExample">
+                    <div class="accordion-item one">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button
+                                class="accordion-button collapsed button-1"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseOne"
+                            >
+                                Warszawa
+                            </button>
+                        </h2>
+                        <div
+                            id="flush-collapseOne"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne"
+                            data-bs-parent="#accordionFlushExample"
+                        >
+                            <div class="accordion-body accordion-carousel-1">
+                                <div class="card text-bg-dark">
+                                    <img src="./img/halinów.jpg" class="card-img" alt="Łowisko w Halinowie" />
+                                    <div class="card-img-overlay">
+                                        <div class="accordion-card-shadow">
+                                            <h5 class="card-title">Łowisko w Halinowie</h5>
+                                            <p class="card-text">
+                                                25km od Warszawy, za blisko 30 zł będziemy mieli szansę złapania karpia, karasia, suma czy jesiotra.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card text-bg-dark">
+                                    <img src="./img/piorunów.jfif" class="card-img" alt="Łowisko w Piorunowie" />
+
+                                    <div class="card-img-overlay">
+                                        <div class="accordion-card-shadow">
+                                            <h5 class="card-title">Łowisko w Piorunowie</h5>
+                                            <p class="card-text">
+                                                Łowisko zlokalizowane w gminie Błonie. Można „upolować” karpia, karasia, okonia i wiele innych.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card text-bg-dark">
+                                    <img src="./img/marki.jpg" class="card-img" alt='Marki "Meksyk"' />
+                                    <div class="card-img-overlay">
+                                        <div class="accordion-card-shadow">
+                                            <h5 class="card-title">Marki "Meksyk"</h5>
+                                            <p class="card-text">Glinianka w Pustelniku, położona niedaleko ulicy Grunwaldzkiej, w pobliżu Zwałki.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item two">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button
+                                class="accordion-button collapsed button-2"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseTwo"
+                            >
+                                Białystok
+                            </button>
+                        </h2>
+                        <div
+                            id="flush-collapseTwo"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo"
+                            data-bs-parent="#accordionFlushExample"
+                        >
+                            <div class="accordion-body accordion-carousel-2">
+                                <div class="card text-bg-dark">
+                                    <img src="./img/serwy.jpg" class="card-img" alt="Jezioro Serwy" />
+                                    <div class="card-img-overlay">
+                                        <div class="accordion-card-shadow">
+                                            <h5 class="card-title">Jezioro Serwy</h5>
+                                            <p class="card-text">
+                                                Jezioro w okolicy miejscowości Mołowiste jest bardzo chętnie odwiedzane przez letników.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card text-bg-dark">
+                                    <img src="./img/stary-młyn.jfif" class="card-img" alt="Łowisko w Piorunowie" />
+                                    <div class="card-img-overlay">
+                                        <div class="accordion-card-shadow">
+                                            <h5 class="card-title">Łowisko Stary Młyn</h5>
+                                            <p class="card-text">
+                                                Na łowisko składają jeden większy i drugi mniejszy staw z czternastoma stanowiskami.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card text-bg-dark">
+                                    <img src="./img/narew.jpg" class="card-img" alt='Narew w Doktorcach"' />
+                                    <div class="card-img-overlay">
+                                        <div class="accordion-card-shadow">
+                                            <h5 class="card-title">Narew w Doktorcach</h5>
+                                            <p class="card-text">
+                                                Nurt szybki, ale są miejsca na spokojną spławikówkę. Brzegi mocno porośnięte trzciną.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item three">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button
+                                class="accordion-button collapsed button-3"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseThree"
+                            >
+                                Olsztyn
+                            </button>
+                        </h2>
+                        <div
+                            id="flush-collapseThree"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree"
+                            data-bs-parent="#accordionFlushExample"
+                        >
+                            <div class="accordion-body accordion-carousel-3">
+                                <div class="card text-bg-dark">
+                                    <img src="./img/wardąg.jpg" class="card-img" alt="Jezioro Wadrąg" />
+                                    <div class="card-img-overlay">
+                                        <div class="accordion-card-shadow">
+                                            <h5 class="card-title">Jezioro Wadrąg</h5>
+                                            <p class="card-text">
+                                                Wędkarze najczęściej łowią płocie i leszcze. Spinningiści łowią także szczupaki i okonie.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card text-bg-dark">
+                                    <img src="./img/dywickie.jpg" class="card-img" alt="Jezioro Dywickie" />
+                                    <div class="card-img-overlay">
+                                        <div class="accordion-card-shadow">
+                                            <h5 class="card-title">Jezioro Dywickie</h5>
+                                            <p class="card-text">
+                                                Najlepszą tu metodą połowu jest spining, można złowić ładne okazy szczupaka oraz sandacza.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card text-bg-dark">
+                                    <img src="./img/berzyńskie.jfif" class="card-img" alt="Jezioro Berzyńskie" />
+                                    <div class="card-img-overlay">
+                                        <div class="accordion-card-shadow">
+                                            <h5 class="card-title">Jezioro Berzyńskie</h5>
+                                            <p class="card-text">
+                                                Miłośnicy wędkarstwa mogą tu złowić wiele gatunków ryb m.in. okonia, płoć, wzdręgę czy lina.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sets" class="sets pt-4" data-aos="zoom-in">
+            <div class="container">
+                <div class="title position-relative pb-2">
+                    <h2>Zestawy wędkarskie</h2>
+                    <p>Charakterytyka zestawów wędkarskich różnego przeznaczenia</p>
+                    <div class="line d-none d-lg-block"></div>
+                </div>
+                <div class="line-mobile d-lg-none mb-4"></div>
+
+                <ul class="nav nav-pills mb-3 d-lg-none justify-content-center sets-nav-mobile" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button
+                            class="nav-link"
+                            id="set-1"
+                            data-bs-toggle="pill"
+                            data-bs-target="#pills-home"
+                            type="button"
+                            role="tab"
+                            aria-controls="pills-home"
+                            aria-selected="true"
+                        >
+                            Zestawy spławikowe
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button
+                            class="nav-link active"
+                            id="set-2"
+                            data-bs-toggle="pill"
+                            data-bs-target="#pills-profile"
+                            type="button"
+                            role="tab"
+                            aria-controls="pills-profile"
+                            aria-selected="false"
+                        >
+                            Zestawy spiningowe
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button
+                            class="nav-link"
+                            id="set-3"
+                            data-bs-toggle="pill"
+                            data-bs-target="#pills-contact"
+                            type="button"
+                            role="tab"
+                            aria-controls="pills-contact"
+                            aria-selected="false"
+                        >
+                            Zestawy morskie
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content d-lg-none mobile" id="pills-tabContent">
+                    <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="set-1" tabindex="0">
+                        <div class="card mb-3 mx-auto">
+                            <div class="row g-0">
+                                <div class="col-md-3 py-2 d-flex justify-content-center">
+                                    <img
+                                        src="./img/zestaw-do-metody-odleglosciowej-match-fiber-360.jpg"
+                                        class="img-fluid rounded-start"
+                                        alt="Zestaw spławikowy"
+                                    />
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Zestawy spławikowe</h5>
+                                        <p class="card-text">
+                                            Ma specjalne miejsce do przykręcenia kołowrotka. Jest miękka i elastyczna pozwala na daleki zarzut
+                                            spławika, długość takich wędek zaczyna się od 200 cm aż do 700 a nawet 800 cm
+                                        </p>
+                                        <p class="card-text"><span class="price">Cena:</span> od 100zł - 400zł</p>
+                                        <a href="#"><button class="btn btn-dark w-100">Sprawdź</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="set-2" tabindex="0">
+                        <div class="card mb-3 mx-auto">
+                            <div class="row g-0">
+                                <div class="col-md-3 py-2 d-flex justify-content-center">
+                                    <img src="./img/zestaw-spinningowy-wixom-1-210-mh.jpg" class="img-fluid rounded-start" alt="Zestaw spiningowy" />
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Zestawy spiningowe</h5>
+                                        <p class="card-text">
+                                            Służy do połowu ryb drapieżnych. Metoda połowu tymi wędkami polega na rzucaniu i zwijaniu sztucznej
+                                            przynęty. Wędki spinningowe zazwyczaj składają się z dwóch części lub są teleskopowe.
+                                        </p>
+                                        <p class="card-text"><span class="price">Cena:</span> 80zł - 500zł</p>
+                                        <a href="#"><button class="btn btn-dark w-100">Sprawdź</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="set-3" tabindex="0">
+                        <div class="card mb-3 mx-auto">
+                            <div class="row g-0">
+                                <div class="col-md-3 py-2 d-flex justify-content-center">
+                                    <img
+                                        src="./img/zestaw-surfcastingowy-symbios-light-100-390.jpg"
+                                        class="img-fluid rounded-start"
+                                        alt="Zestaw morski"
+                                    />
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Zestaw morski</h5>
+                                        <p class="card-text">
+                                            Bardzo solidnie wykonana. Wybierając wędkę morską trzeba uważać aby nie przesadzić z ciężarem wyrzutowym.
+                                            Sklepy sugerują od 250 - do 500 gram wyrzutu, zaleca się jednak mniejsze wartości. Najbardziej
+                                            uniwersalnym wyrzutem jest od 120 - do 250. Długość wędzisk morskich waha się od 2 m do 4 metrów.
+                                        </p>
+                                        <p class="card-text"><span class="price">Cena:</span> 200zł - 900zł</p>
+                                        <a href="#"><button class="btn btn-dark w-100">Sprawdź</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-none d-lg-flex align-items-start">
+                    <div class="nav flex-column nav-pills me-3 sets-nav-desktop" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button
+                            class="nav-link"
+                            id="v-set-1"
+                            data-bs-toggle="pill"
+                            data-bs-target="#v-pills-home"
+                            type="button"
+                            role="tab"
+                            aria-controls="v-pills-home"
+                            aria-selected="true"
+                        >
+                            Zestaw spławikowy
+                        </button>
+                        <button
+                            class="nav-link active"
+                            id="v-set-2"
+                            data-bs-toggle="pill"
+                            data-bs-target="#v-pills-profile"
+                            type="button"
+                            role="tab"
+                            aria-controls="v-pills-profile"
+                            aria-selected="false"
+                        >
+                            Zestaw spiningowy
+                        </button>
+                        <button
+                            class="nav-link"
+                            id="v-set-3"
+                            data-bs-toggle="pill"
+                            data-bs-target="#v-pills"
+                            type="button"
+                            role="tab"
+                            aria-controls="v-pills"
+                            aria-selected="false"
+                        >
+                            Zestaw morski
+                        </button>
+                    </div>
+                    <div class="tab-content desktop" id="v-pills-tabContent">
+                        <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-set-1" tabindex="0">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-3 py-2 d-flex justify-content-center">
+                                        <img
+                                            src="./img/zestaw-do-metody-odleglosciowej-match-fiber-360.jpg"
+                                            class="img-fluid rounded-start"
+                                            alt="Zestaw spławikowy"
+                                        />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Zestaw spławikowy</h5>
+                                            <p class="card-text">
+                                                Wędka ma specjalne miejsce do przykręcenia kołowrotka. Jest miękka i elastyczna pozwala na daleki
+                                                zarzut spławika, długość takich wędek zaczyna się od 200 cm aż do 700 a nawet 800 cm.
+                                            </p>
+                                            <p class="card-text"><span class="price">Cena:</span> od 100zł - 400zł</p>
+                                            <a href="#"><button class="btn btn-dark w-100">Sprawdź</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-set-2" tabindex="0">
+                            <div class="card mb-3 mx-auto">
+                                <div class="row g-0">
+                                    <div class="col-md-3 py-2 d-flex justify-content-center">
+                                        <img
+                                            src="./img/zestaw-spinningowy-wixom-1-210-mh.jpg"
+                                            class="img-fluid rounded-start"
+                                            alt="Zestaw spiningowy"
+                                        />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Zestaw spiningowy</h5>
+                                            <p class="card-text">
+                                                Służy do połowu ryb drapieżnych. Metoda połowu tymi wędkami polega na rzucaniu i zwijaniu sztucznej
+                                                przynęty. Wędki spinningowe zazwyczaj składają się z dwóch części lub są teleskopowe.
+                                            </p>
+                                            <p class="card-text"><span class="price">Cena:</span> 80zł - 500zł</p>
+                                            <a href="#"><button class="btn btn-dark w-100">Sprawdź</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills" role="tabpanel" aria-labelledby="v-set-3" tabindex="0">
+                            <div class="card mb-3 mx-auto">
+                                <div class="row g-0">
+                                    <div class="col-md-3 py-2 d-flex justify-content-center">
+                                        <img
+                                            src="./img/zestaw-surfcastingowy-symbios-light-100-390.jpg"
+                                            class="img-fluid rounded-start"
+                                            alt="Zestaw morski"
+                                        />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Zestaw morski</h5>
+                                            <p class="card-text">
+                                                Bardzo solidnie wykonany. Wybierając wędkę morską trzeba uważać aby nie przesadzić z ciężarem
+                                                wyrzutowym. Sklepy sugerują od 250 - do 500 gram wyrzutu lecz najbardziej uniwersalnym jest od 120 -
+                                                do 250 gram. Długość wędzisk morskich waha się od 2 m do 4 metrów.
+                                            </p>
+                                            <p class="card-text"><span class="price">Cena:</span> 200zł - 900zł</p>
+                                            <a href="#"><button class="btn btn-dark w-100">Sprawdź</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lures" class="lures pt-4 pb-5" data-aos="zoom-in">
+            <div class="container">
+                <div class="title position-relative">
+                    <h2>Przynęty</h2>
+                    <div class="line d-none d-lg-block"></div>
+                </div>
+                <div class="line-mobile d-lg-none my-3"></div>
+
+                <div class="row lures-carousel">
+                    <div class="col">
+                        <div class="card">
+                            <img src="./img/błystka.avif" class="card-img-top" alt="Błystki" />
+                            <div class="card-body">
+                                <h5 class="card-title">Błystki</h5>
+                                <p class="card-text">
+                                    <span class="price">Cena:</span> od 10 zł/szt.
+                                    <button class="btn btn-dark buy">Sprawdź</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="./img/gumy.avif" class="card-img-top" alt="Przynęty miękkie/gumy" />
+                            <div class="card-body">
+                                <h5 class="card-title">Gumy</h5>
+                                <p class="card-text">
+                                    <span class="price">Cena:</span> od 4 zł/szt.
+                                    <button class="btn btn-dark buy">Sprawdź</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="./img/jaskółki.jpg" class="card-img-top" alt="Błystki" />
+                            <div class="card-body">
+                                <h5 class="card-title">Jaskółki</h5>
+                                <p class="card-text">
+                                    <span class="price">Cena:</span> od 2 zł/szt.
+                                    <button class="btn btn-dark buy">Sprawdź</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="./img/cykada.jpg" class="card-img-top" alt="Błystki" />
+                            <div class="card-body">
+                                <h5 class="card-title">Cykady</h5>
+                                <p class="card-text">
+                                    <span class="price">Cena:</span> od 15 zł/szt.
+                                    <button class="btn btn-dark buy">Sprawdź</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="./img/kukurydza.png" class="card-img-top" alt="Przynęty warzywne" />
+                            <div class="card-body">
+                                <h5 class="card-title">Przynęty warzywne</h5>
+                                <p class="card-text">
+                                    <span class="price">Cena:</span> od 7 zł/szt.
+                                    <button class="btn btn-dark buy">Sprawdź</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact py-4">
+            <div class="shadow top-0"></div>
+            <div class="container">
+                <div class="title position-relative text-center" data-aos="zoom-in">
+                    <h2>Kontakt</h2>
+                    <div class="line left d-none d-lg-block top-50"></div>
+                    <div class="line right d-none d-lg-block top-50"></div>
+                    <div class="line-mobile d-lg-none my-3"></div>
+                </div>
+
+                <div class="row d-flex justify-content-center py-3" data-aos="fade-right" data-aos-delay="400" data-aos-offset="0">
+                    <div class="col-12 col-sm-6 col-lg-4 address d-flex flex-column align-items-center">
+                        <p class="header">Siedziba firmy:</p>
+                        <p>Ulica Ceglana 14</p>
+                        <p>03-135 Warszawa</p>
+                        <p>NIP: 1234567890</p>
+                        <br />
+                        <p class="header">Kontakt mailowy:</p>
+                        <p>realtree-fishing@mail.com</p>
+                    </div>
+                    <div class="line-mobile d-md-none my-4 w-75"></div>
+                    <div
+                        class="col-12 col-sm-6 col-lg-4 d-flex justify-content-around align-items-md-center"
+                        data-aos="fade-left"
+                        data-aos-delay="800"
+                        data-aos-offset="0"
+                    >
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Wykonał: Kamil Kwiatkowski 4i5 &copy; 2023</p>
+        </footer>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./js/slick-setup.js"></script>
+        <script>
+            AOS.init({
+                startEvent: "DOMContentLoaded",
+                offset: 200,
+                duration: 600,
+                once: true,
+            });
+            AOS.refresh();
+        </script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

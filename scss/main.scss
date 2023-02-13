@@ -1,0 +1,653 @@
+@use "colors" as *;
+@use "animations";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 64px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $gainsboro;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+button:hover {
+    background-color: $queen-blue !important;
+}
+
+.up-down {
+    animation: up-down 2s ease-in-out infinite both;
+}
+
+.line-in {
+    animation: line-in 2.3s ease-in-out;
+}
+
+.return-top {
+    position: fixed;
+    bottom: 30px;
+    right: -80px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $midnight;
+    box-shadow: 0 0 10px $midnight;
+    z-index: 15;
+    transition: background-color 0.3s, right ease-in-out 0.4s;
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        transition: color 0.3s;
+    }
+}
+
+.show {
+    right: 30px;
+}
+
+.return-top:hover {
+    background-color: $midnight-very-light;
+    i {
+        color: $sky-blue;
+    }
+}
+.shadow {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+.news-card-shadow {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.line {
+    position: absolute;
+    top: 32px;
+    right: 0px;
+    display: inline-block;
+    width: 50%;
+    height: 2.5px;
+    background-color: $queen-blue;
+}
+
+.line-mobile {
+    width: 100%;
+    height: 2.5px;
+    background-color: $queen-blue;
+}
+
+.title {
+    text-align: center;
+}
+
+.navbar {
+    background-color: $midnight !important;
+    background-image: url("../img/logo-black-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px 150px;
+    z-index: 10;
+
+    i {
+        color: $gainsboro;
+        font-size: 30px;
+        padding: 5px;
+    }
+    .fa-house {
+        font-size: 14px;
+    }
+
+    .navbar-toggler {
+        transition: filter 0.3s;
+    }
+    .navbar-toggler:focus {
+        box-shadow: 0 0 0 black;
+    }
+
+    .navbar-toggler:hover {
+        filter: brightness(0) saturate(100%) invert(80%) sepia(6%) saturate(3505%) hue-rotate(161deg) brightness(91%) contrast(95%);
+    }
+    .navbar-logo {
+        img {
+            width: 60.25px;
+            height: 100%;
+            transition: filter 0.3s;
+        }
+        img:hover {
+            filter: brightness(0) saturate(100%) invert(80%) sepia(6%) saturate(3505%) hue-rotate(161deg) brightness(91%) contrast(95%);
+        }
+    }
+    .navbar-brand {
+        img {
+            width: 120px;
+            height: 100%;
+            transition: filter 0.3s;
+        }
+        img:hover {
+            filter: brightness(0) saturate(100%) invert(80%) sepia(6%) saturate(3505%) hue-rotate(161deg) brightness(91%) contrast(95%);
+        }
+    }
+
+    .navbar-nav {
+        .dropdown-menu {
+            background-color: $midnight-light;
+            transition: background-color 0.3s;
+        }
+        .dropdown-item {
+            color: $gainsboro;
+            transition: color 0.3s;
+        }
+        .dropdown-item:hover {
+            background-color: $midnight-light;
+            color: $sky-blue;
+        }
+        .nav-link {
+            position: relative;
+            color: $gainsboro;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: $sky-blue;
+        }
+        .nav-link::before {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            display: block;
+            content: "";
+            background-color: $sky-blue;
+            width: 0;
+            height: 1px;
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link:hover::before {
+            width: 100%;
+        }
+        .active {
+            color: $sky-blue;
+        }
+    }
+
+    .offcanvas {
+        background-color: $midnight;
+        .offcanvas-background {
+            position: absolute;
+            top: 80%;
+            right: -25%;
+            transform: translate(-50%, -50%);
+            rotate: 90deg;
+            opacity: 0.2;
+        }
+        .offcanvas-title {
+            width: 130px;
+            height: 100%;
+        }
+
+        .btnClose {
+            background-color: transparent;
+            border: none;
+            transition: filter 0.3s;
+        }
+
+        .btnClose:hover {
+            filter: brightness(0) saturate(100%) invert(80%) sepia(6%) saturate(3505%) hue-rotate(161deg) brightness(91%) contrast(95%);
+        }
+        .offcanvas-footer {
+            color: $gainsboro;
+            text-align: center;
+        }
+    }
+}
+
+header {
+    width: 100%;
+    height: 250px;
+    margin-top: 64px;
+    background-image: url("../img/hero1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    a {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+        transition: color 0.3s;
+    }
+    a:hover {
+        color: $sky-blue;
+    }
+    .header-title {
+        text-align: center;
+        p {
+            font-size: 18px;
+        }
+        span {
+            color: $sky-blue;
+        }
+    }
+}
+
+.news-feed {
+    color: $midnight;
+    .title {
+        h2 {
+            text-transform: uppercase;
+        }
+    }
+    .new-news {
+        .card {
+            overflow: hidden;
+            transition: scale 0.3s;
+
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+            .card-title {
+                width: 90%;
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+            }
+            .text-muted {
+                color: $gainsboro !important;
+            }
+        }
+        .card:hover {
+            scale: 1.05;
+        }
+    }
+    .popular-news {
+        .card {
+            color: $midnight;
+        }
+        img {
+            height: 100px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+        .line {
+            top: 50%;
+            width: 60%;
+        }
+    }
+}
+
+.fisheries {
+    color: $midnight;
+
+    .accordion {
+        .accordion-item .button-1,
+        .accordion-item.one {
+            border-top-left-radius: 15px !important;
+            border-top-right-radius: 15px !important;
+        }
+        .accordion-item .button-3,
+        .accordion-item.three {
+            border-bottom-left-radius: 15px !important;
+            border-bottom-right-radius: 15px !important;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        .accordion-button:hover {
+            background-color: $queen-blue;
+        }
+        .accordion-button {
+            color: $gainsboro;
+            border: none;
+            background-color: $dark-queen-blue;
+        }
+        .accordion-button::after {
+            background-image: url("../img/icons/expand_more_FILL0_wght400_GRAD0_opsz48.svg");
+            background-size: 150%;
+            background-position: center;
+            filter: invert(100);
+            transition: 0.3s;
+        }
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("../img/icons/expand_more_FILL0_wght400_GRAD0_opsz48.svg");
+            filter: invert(80%) sepia(6%) saturate(3505%) hue-rotate(161deg) brightness(91%) contrast(95%);
+        }
+
+        .accordion-item {
+            max-height: 410px;
+            border: none;
+            background-color: $dark-queen-blue;
+        }
+
+        .accordion-body {
+            .card {
+                overflow: hidden;
+                height: 327px;
+                margin: 0 5px;
+                img {
+                    height: 327px;
+                    object-fit: cover;
+                }
+            }
+            .card-img-overlay {
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 0;
+                z-index: 0;
+            }
+        }
+        .accordion-card-shadow {
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -5;
+            padding: 15px;
+            width: 100%;
+        }
+    }
+}
+
+.sets {
+    color: $midnight;
+    .nav-link {
+        color: $white;
+        background-color: $dark-queen-blue;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .nav-link.active {
+        color: $midnight;
+        background-color: $sky-blue;
+    }
+
+    .nav-link.active:hover {
+        color: $white;
+    }
+
+    .tab-content {
+        .card {
+            width: 100%;
+        }
+        .card-title {
+            font-weight: 600;
+        }
+        img {
+            width: 150px;
+            height: 100%;
+            object-fit: contain;
+        }
+        .price {
+            font-weight: bold;
+        }
+    }
+    .sets-nav-desktop {
+        .nav-link {
+            width: 200px;
+        }
+    }
+}
+
+.lures {
+    color: $midnight;
+    .line {
+        width: 70%;
+        top: 50%;
+    }
+    .lures-carousel {
+        padding-top: 15px;
+    }
+    .card {
+        margin: 0 12px;
+        text-align: center;
+    }
+    img {
+        margin: 20px auto;
+        width: 80%;
+        height: 184px;
+        object-fit: contain;
+    }
+    button {
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+    .price {
+        font-weight: bold;
+    }
+}
+
+.contact {
+    position: relative;
+    background-image: url("../img/lodka.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    .address {
+        p {
+            margin: 5px 0;
+        }
+        .header {
+            font-weight: 600;
+        }
+    }
+
+    i {
+        font-size: 30px;
+    }
+    a:hover {
+        color: $sky-blue;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: $midnight;
+    p {
+        margin: 0;
+    }
+}
+@media (min-width: 410px) {
+    header {
+        a {
+            bottom: 30px;
+            font-size: 36px;
+        }
+    }
+}
+
+@media (min-width: 425px) {
+    .lures {
+        img[alt="Przynęty warzywne"] {
+            height: 160px;
+        }
+    }
+}
+@media (min-width: 515px) {
+    .lures {
+        img[alt="Przynęty warzywne"] {
+            height: 184px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .news-feed {
+        .popular-news {
+            .card {
+                .card-body {
+                    height: 100%;
+                }
+                .p {
+                    padding-top: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .lures {
+        img[alt="Przynęty warzywne"] {
+            height: 160px;
+        }
+    }
+
+    .contact {
+        i {
+            font-size: 40px;
+        }
+    }
+    .line.left,
+    .line.right {
+        width: 35%;
+    }
+    .left {
+        left: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .title {
+        text-align: left;
+    }
+
+    .navbar-logo {
+        img {
+            width: 80px;
+            height: 100%;
+            transition: filter 0.3s;
+        }
+    }
+
+    .news-feed {
+        .popular-news {
+            .card {
+                .p {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+    .fisheries {
+        .line {
+            width: 55%;
+        }
+    }
+    .sets {
+        .line {
+            width: 40%;
+        }
+    }
+    .lures {
+        .line {
+            width: 80%;
+        }
+    }
+    .lures {
+        img[alt="Przynęty warzywne"] {
+            height: auto;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .fisheries {
+        .line {
+            width: 60%;
+        }
+    }
+    .sets {
+        .line {
+            width: 45%;
+        }
+    }
+    .lures {
+        .card {
+            height: 100%;
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    html {
+        scroll-padding-top: 72px;
+    }
+
+    header {
+        margin-top: 72px;
+    }
+
+    .navbar {
+        .navbar-logo {
+            img {
+                width: 80px;
+            }
+        }
+        .navbar-brand {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            img {
+                width: 140px;
+                height: 100%;
+            }
+        }
+        .offcanvas {
+            .offcanvas-background {
+                display: none;
+            }
+        }
+    }
+    .news-feed {
+        .popular-news {
+            .title {
+                height: 70px;
+                margin-bottom: 15px;
+            }
+            img {
+                height: 120px;
+            }
+            h2 {
+                padding-top: 1rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
