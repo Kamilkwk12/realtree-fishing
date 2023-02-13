@@ -1,13 +1,11 @@
-$btn = $(".return-top");
+const returnBtn = document.querySelector(".return-top");
 
-$(window).scroll(function () {
-    if ($(this).scrollTop() >= 250) {
-        $btn.addClass("show");
-    } else {
-        $btn.removeClass("show");
-    }
-});
-
-$(document).ready(function () {
-
+document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("scroll", function () {
+        if (this.scrollY.valueOf() >= 250) {
+            returnBtn.classList.add("show");
+        } else {
+            returnBtn.classList.remove("show");
+        }
+    });
 });

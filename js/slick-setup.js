@@ -1,3 +1,8 @@
+var $slickCarousels = $(".slick");
+var $accordionButtons = $(".accordion-button");
+var $nextSlideButtons = $(".next-slide");
+var $previousSlideButtons = $(".previous-slide");
+
 function slickNews() {
     $(".popular-news-desktop-carousel").slick({
         arrows: false,
@@ -27,19 +32,10 @@ $(window).resize(function () {
     }
 });
 
-$b1 = $(".button-1");
-$b2 = $(".button-2");
-$b3 = $(".button-3");
-
-$ac1 = $(".accordion-carousel-1");
-$ac2 = $(".accordion-carousel-2");
-$ac3 = $(".accordion-carousel-3");
-
 function slickAccordionSetup($className, $buttonName) {
     $($buttonName).click(function () {
         $($className).slick({
             arrows: false,
-            autoplay: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             mobileFirst: true,
@@ -61,10 +57,6 @@ function slickAccordionSetup($className, $buttonName) {
         });
     });
 }
-
-$(document).ready(slickAccordionSetup($ac1, $b1));
-$(document).ready(slickAccordionSetup($ac2, $b2));
-$(document).ready(slickAccordionSetup($ac3, $b3));
 
 $(document).ready(function () {
     $(".lures-carousel").slick({
@@ -99,5 +91,21 @@ $(document).ready(function () {
                 settings: "unslick",
             },
         ],
+    });
+});
+
+$(document).ready(() => {
+    $.each($slickCarousels, (index, carousel) => {
+        slickAccordionSetup(carousel, $accordionButtons.get(index));
+    });
+    $.each($slickCarousels, (index, carousel) => {
+        $($nextSlideButtons.get(index)).click(function () {
+            $(carousel).slick("slickNext");
+        });
+    });
+    $.each($slickCarousels, (index, carousel) => {
+        $($previousSlideButtons.get(index)).click(function () {
+            $(carousel).slick("slickPrev");
+        });
     });
 });

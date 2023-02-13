@@ -350,6 +350,9 @@ header .header-title span {
   border: none;
   background-color: #212529;
 }
+.fisheries .accordion .accordion-body {
+  position: relative;
+}
 .fisheries .accordion .accordion-body .card {
   overflow: hidden;
   height: 327px;
@@ -368,6 +371,39 @@ header .header-title span {
   justify-content: flex-end;
   padding: 0;
   z-index: 0;
+}
+.fisheries .accordion .accordion-body button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #1d1d1d;
+  z-index: 2;
+  transition: background-color 0.3s;
+}
+.fisheries .accordion .accordion-body button:hover {
+  background-color: #303030 !important;
+}
+.fisheries .accordion .accordion-body button:hover i {
+  color: #6cc4e2;
+}
+.fisheries .accordion .accordion-body i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #dee0e7;
+  font-size: 26px;
+  transition: color 0.3s;
+}
+.fisheries .accordion .accordion-body .next-slide {
+  right: 15px;
+}
+.fisheries .accordion .accordion-body .previous-slide {
+  left: 15px;
 }
 .fisheries .accordion .accordion-card-shadow {
   background-color: rgba(0, 0, 0, 0.5);
@@ -530,9 +566,6 @@ footer p {
   .lures .line {
     width: 80%;
   }
-  .lures img[alt="Przynęty warzywne"] {
-    height: auto;
-  }
 }
 @media (min-width: 1200px) {
   .fisheries .line {
@@ -544,6 +577,9 @@ footer p {
   .lures .card {
     height: 100%;
     margin: 0;
+  }
+  .lures img[alt="Przynęty warzywne"] {
+    height: auto;
   }
 }
 @media (min-width: 1400px) {
