@@ -79,7 +79,7 @@ button:hover {
   transition: color 0.3s;
 }
 
-.show {
+.show-return-button {
   right: 30px;
 }
 
@@ -137,18 +137,20 @@ button:hover {
   color: #d2d4db;
   font-size: 30px;
   padding: 5px;
+  transition: color 0.3s, scale 0.3s;
 }
 .navbar .fa-house {
   font-size: 14px;
 }
-.navbar .navbar-toggler {
-  transition: filter 0.3s;
+.navbar button:hover {
+  background-color: transparent !important;
+}
+.navbar button:hover i {
+  color: #6cc4e2;
+  scale: 1.2;
 }
 .navbar .navbar-toggler:focus {
   box-shadow: 0 0 0 black;
-}
-.navbar .navbar-toggler:hover {
-  filter: brightness(0) saturate(100%) invert(80%) sepia(6%) saturate(3505%) hue-rotate(161deg) brightness(91%) contrast(95%);
 }
 .navbar .navbar-logo img {
   width: 60.25px;
@@ -218,13 +220,13 @@ button:hover {
   width: 130px;
   height: 100%;
 }
-.navbar .offcanvas .btnClose {
+.navbar .offcanvas .button-close {
   background-color: transparent;
   border: none;
   transition: filter 0.3s;
 }
-.navbar .offcanvas .btnClose:hover {
-  filter: brightness(0) saturate(100%) invert(80%) sepia(6%) saturate(3505%) hue-rotate(161deg) brightness(91%) contrast(95%);
+.navbar .offcanvas .button-close:hover i {
+  color: #6cc4e2;
 }
 .navbar .offcanvas .offcanvas-footer {
   color: #d2d4db;
@@ -427,6 +429,18 @@ header .header-title span {
 }
 .sets .nav-link.active:hover {
   color: #dee0e7;
+}
+.sets .tab-content {
+  display: flex;
+}
+.sets .tab-content > .tab-pane {
+  display: block;
+  visibility: hidden;
+  margin-right: -100%;
+  width: 100%;
+}
+.sets .tab-content > .active {
+  visibility: visible;
 }
 .sets .tab-content .card {
   width: 100%;

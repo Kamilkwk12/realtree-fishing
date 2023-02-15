@@ -57,7 +57,7 @@ button:hover {
     }
 }
 
-.show {
+.show-return-button {
     right: 30px;
 }
 
@@ -113,21 +113,23 @@ button:hover {
         color: $gainsboro;
         font-size: 30px;
         padding: 5px;
+        transition: color 0.3s, scale 0.3s;
     }
     .fa-house {
         font-size: 14px;
     }
-
-    .navbar-toggler {
-        transition: filter 0.3s;
+    button:hover {
+        background-color: transparent !important;
+        i {
+            color: $sky-blue;
+            scale: 1.2;
+        }
     }
+
     .navbar-toggler:focus {
         box-shadow: 0 0 0 black;
     }
 
-    .navbar-toggler:hover {
-        filter: brightness(0) saturate(100%) invert(80%) sepia(6%) saturate(3505%) hue-rotate(161deg) brightness(91%) contrast(95%);
-    }
     .navbar-logo {
         img {
             width: 60.25px;
@@ -204,14 +206,16 @@ button:hover {
             height: 100%;
         }
 
-        .btnClose {
+        .button-close {
             background-color: transparent;
             border: none;
             transition: filter 0.3s;
         }
 
-        .btnClose:hover {
-            filter: brightness(0) saturate(100%) invert(80%) sepia(6%) saturate(3505%) hue-rotate(161deg) brightness(91%) contrast(95%);
+        .button-close:hover {
+            i {
+                color: $sky-blue;
+            }
         }
         .offcanvas-footer {
             color: $gainsboro;
@@ -432,6 +436,20 @@ header {
         color: $white;
     }
 
+    .tab-content {
+        display: flex;
+    }
+
+    .tab-content > .tab-pane {
+        display: block;
+        visibility: hidden;
+        margin-right: -100%;
+        width: 100%;
+    }
+
+    .tab-content > .active {
+        visibility: visible;
+    }
     .tab-content {
         .card {
             width: 100%;
